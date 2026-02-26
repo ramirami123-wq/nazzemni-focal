@@ -15,13 +15,13 @@
       "type": "newsletter-popup",
       "disabled": true,
       "settings": {
-        "apparition_delay": 0,
-        "show_only_on_index": false,
-        "show_only_for_visitors": false,
-        "show_only_once": false,
+        "apparition_delay": 5,
+        "show_only_on_index": true,
+        "show_only_for_visitors": true,
+        "show_only_once": true,
         "image_position": "left",
-        "title": "",
-        "content": ""
+        "title": "Get 10% off",
+        "content": "<p>Promotions, new products and sales. Directly to your inbox.</p>"
       }
     },
     "privacy-banner": {
