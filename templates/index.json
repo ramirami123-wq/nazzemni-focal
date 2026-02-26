@@ -12,8 +12,27 @@
     "slideshow": {
       "type": "slideshow",
       "blocks": {
+        "image_dDjEhE": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/cover_page.png",
+            "text_position": "middle_center",
+            "subheading": "Tell your story",
+            "title": "Slide title",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
         "slide-1": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "mobile_image": "shopify://shop_images/Nazzemni_logo_-_Moussa_Barakat_1.jpg",
             "text_position": "middle_center",
@@ -32,6 +51,7 @@
         }
       },
       "block_order": [
+        "image_dDjEhE",
         "slide-1"
       ],
       "settings": {
