@@ -1,26 +1,31 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "general": {
     "meta": {
       "page": "Page {{ page }}"
     },
-
     "label": {
       "color": "Color,Colour",
       "white": "White",
       "size": "Size"
     },
-
     "breadcrumb": {
       "title": "Breadcrumb",
       "home": "Home"
     },
-
     "pagination": {
       "previous_page": "Previous",
       "next_page": "Next",
       "go_to_page": "Navigate to page {{page}}"
     },
-
     "accessibility": {
       "skip_to_content": "Skip to content",
       "close": "Close",
@@ -32,7 +37,6 @@
       "show_product": "Show product {{title}}",
       "star_reviews_info": "{{ rating_value }} out of {{ rating_max }} stars"
     },
-
     "social": {
       "facebook_share": "Share on Facebook",
       "pinterest_pin": "Pin on Pinterest",
@@ -41,21 +45,17 @@
       "email_label": "E-mail",
       "follow_label": "Follow us on {{ social_media }}"
     },
-
     "newsletter": {
       "email": "Your e-mail",
       "subscribe": "Subscribe",
       "success": "You have been subscribed to our newsletter"
     },
-
     "faq": {
       "categories": "Categories"
     },
-
     "form": {
       "max_characters": "{{ max_chars }} characters max"
     },
-
     "onboarding": {
       "blog_post_category": "Category",
       "blog_post_title": "Article",
@@ -65,7 +65,6 @@
       "collection_title": "Collection"
     }
   },
-
   "header": {
     "general": {
       "navigation": "Navigation",
@@ -77,26 +76,22 @@
       "country": "Country/region"
     }
   },
-
   "footer": {
     "general": {
       "language": "Language",
       "country": "Country/region",
       "we_accept": "We accept"
     },
-
     "newsletter": {
       "email": "Your e-mail",
       "submit": "Register",
       "success": "You have been registered to our newsletter."
     },
-
     "cookie_bar": {
       "accept": "Accept",
       "decline": "Decline"
     }
   },
-
   "cart": {
     "general": {
       "title": "Cart",
@@ -131,7 +126,6 @@
         "other": "{{ count }} items"
       }
     },
-
     "shipping_estimator": {
       "estimate_shipping": "Estimate shipping",
       "country": "Country",
@@ -144,7 +138,6 @@
       "error": "One or more error occurred while retrieving shipping rates:"
     }
   },
-
   "collection": {
     "general": {
       "filters": "Filters",
@@ -170,7 +163,6 @@
         "other": "{{ count }} products"
       }
     },
-
     "product": {
       "sold_out": "Sold out",
       "discount_html": "Save {{ savings }}",
@@ -184,7 +176,6 @@
       }
     }
   },
-
   "product": {
     "general": {
       "description": "Description",
@@ -199,27 +190,25 @@
       "need_help": "Need help?",
       "view_details": "View details",
       "include_taxes": "Tax included.",
-      "shipping_policy_html": "<a href=\"{{ link }}\" class=\"link link--accented\">Shipping calculated<\/a> at checkout",
+      "shipping_policy_html": "<a href=\"{{ link }}\" class=\"link link--accented\">Shipping calculated</a> at checkout",
       "reviews_count": {
         "zero": "No reviews",
         "one": "{{ count }} review",
         "other": "{{ count }} reviews"
       }
     },
-
     "volume_pricing": {
       "title": "Volume pricing",
       "minimum": "{{ minimum_quantity }}+",
       "price_at_each": "{{ price }}/ea"
     },
-
     "form": {
       "choose_options": "Choose options",
       "quantity": "Quantity",
       "variant": "Variant",
       "unavailable": "Unavailable",
       "pre_order": "Pre-order",
-      "add_to_cart": "Add to cart",
+      "add_to_cart": "Add to cart →",
       "sold_out": "Sold out",
       "in_stock": "In stock",
       "oversell_stock": "Re-stocking soon",
@@ -230,14 +219,12 @@
       },
       "contact_us": "Contact us"
     },
-
     "quantity": {
       "minimum_of": "Minimum of {{ min }}",
       "maximum_of": "Maximum of {{ max }}",
       "increment_of": "Increment of {{ step }}"
     }
   },
-
   "store_availability": {
     "general": {
       "view_store_info": "View store information",
@@ -248,7 +235,6 @@
       "pick_up_unavailable_at": "Pickup currently unavailable at {{ location_name }}"
     }
   },
-
   "list_collections": {
     "general": {
       "title": "Collections",
@@ -261,7 +247,6 @@
       }
     }
   },
-
   "blog": {
     "general": {
       "empty": "This blog has no articles",
@@ -270,7 +255,6 @@
       "all_posts": "All posts"
     }
   },
-
   "article": {
     "general": {
       "written_by": "By {{ author }}",
@@ -285,7 +269,6 @@
         "other": "{{ count }} minutes"
       }
     },
-
     "comments": {
       "leave_comment": "Leave a comment",
       "moderated": "All comments are moderated before being published.",
@@ -302,12 +285,10 @@
       }
     }
   },
-
   "customer": {
     "general": {
       "title": "My account"
     },
-
     "login": {
       "title": "Login",
       "instructions": "Please enter your e-mail and password:",
@@ -318,7 +299,6 @@
       "new_customer": "New customer?",
       "create_account": "Create an account"
     },
-
     "recover_password": {
       "title": "Recover password",
       "instructions": "Please enter your e-mail:",
@@ -328,7 +308,6 @@
       "back_to_login": "Back to login",
       "success": "An e-mail has been sent to your address with instructions to recover your password."
     },
-
     "activate_account": {
       "title": "Activate account",
       "instructions": "Enter a password to create your account:",
@@ -337,7 +316,6 @@
       "submit": "Activate",
       "cancel": "Cancel"
     },
-
     "reset_password": {
       "title": "Reset password",
       "instructions": "Enter a new password for your account:",
@@ -345,7 +323,6 @@
       "password_confirmation": "Password confirmation",
       "submit": "Reset"
     },
-
     "register": {
       "title": "Register",
       "instructions": "Please fill in the fields below:",
@@ -357,7 +334,6 @@
       "already_have_account": "Already have an account?",
       "login": "Login"
     },
-
     "orders": {
       "title": "Orders",
       "no_orders": "You have not placed any orders yet.",
@@ -390,7 +366,6 @@
       "shipping_address": "Shipping address",
       "billing_address": "Billing address"
     },
-
     "addresses": {
       "title": "Addresses",
       "no_address": "You have not saved any addresses yet.",
@@ -414,12 +389,10 @@
       "province": "Province",
       "set_default": "Set as default"
     },
-
     "logout": {
       "title": "Logout"
     }
   },
-
   "search": {
     "general": {
       "title": "Search",
@@ -435,7 +408,6 @@
       "collections": "Collections"
     }
   },
-
   "contact": {
     "form": {
       "name": "Name",
@@ -445,7 +417,6 @@
       "successfully_sent": "Your e-mail has been sent."
     }
   },
-
   "gift_card": {
     "issued": {
       "subtext": "Here's your gift card!",
@@ -460,7 +431,6 @@
       "add_to_apple_wallet": "Add to Apple Wallet",
       "go_to_store": "Go to the store"
     },
-
     "recipient": {
       "checkbox": "I want to send this as a gift",
       "email_label": "Recipient email",
@@ -469,7 +439,6 @@
       "message_label": "Message (optional)"
     }
   },
-
   "password": {
     "general": {
       "store_owner": "Store owner?",
@@ -477,20 +446,17 @@
       "powered_by": "This store will be powered by",
       "enter_password": "Enter using password"
     },
-
     "password": {
       "label": "Please enter password to access the store",
       "input": "Password",
       "submit": "Enter"
     },
-
     "newsletter": {
       "success": "You have been registered to our newsletter",
       "email": "Your e-mail",
       "submit": "Notify me"
     }
   },
-
   "404": {
     "general": {
       "title": "Page not found",
