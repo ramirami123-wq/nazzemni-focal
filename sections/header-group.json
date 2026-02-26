@@ -47,7 +47,7 @@
       "type": "header",
       "settings": {
         "enable_sticky_header": true,
-        "logo": "{{ shop.brand.logo }}",
+        "logo": "shopify://shop_images/Nazzemni_logo_-_Moussa_Barakat-removebg-preview_d754d952-62fa-42dc-ba5d-630201c2c6b9.png",
         "logo_max_width": 140,
         "mobile_logo_max_width": 100,
         "navigation_menu": "main-menu",
