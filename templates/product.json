@@ -339,29 +339,29 @@
         "second_button_padding_horizontal": 40,
         "second_button_radius": 6,
         "second_button_border_thickness": 2,
-        "table_heading_color": "#2F1718",
-        "table_heading_active_color": "#FFFFFF",
+        "table_heading_color": "#2f1718",
+        "table_heading_active_color": "#ffffff",
         "table_heading_bg_active_color": "#2a3e79",
-        "table_column_active_bg_color": "#FFFFFF",
+        "table_column_active_bg_color": "#ffffff",
         "table_column_active_border_color": "#2a3e79",
-        "table_row_border_color": "#D3CABC",
-        "table_row_heading_color": "#2F1718",
-        "table_row_text_color": "#2F1718",
+        "table_row_border_color": "#d3cabc",
+        "table_row_heading_color": "#2f1718",
+        "table_row_text_color": "#2f1718",
         "table_row_active_text_color": "#2a3e79",
         "button_color": "#2a3e79",
-        "button_hover_color": "#FFFFFF",
+        "button_hover_color": "#ffffff",
         "button_bg_color": "",
         "button_bg_hover_color": "#2a3e79",
         "button_border_color": "#2a3e79",
         "button_border_hover_color": "#2a3e79",
-        "second_button_color": "#FFFFFF",
-        "second_button_hover_color": "#FFFFFF",
+        "second_button_color": "#ffffff",
+        "second_button_hover_color": "#ffffff",
         "second_button_bg_color": "#2a3e79",
         "second_button_bg_hover_color": "#2a3e79",
         "second_button_border_color": "#2a3e79",
         "second_button_border_hover_color": "#2a3e79",
-        "heading_color": "#2F1718",
-        "background_color": "#FFFAED",
+        "heading_color": "#2f1718",
+        "background_color": "#fffaed",
         "background_gradient": "",
         "border_color": "#000000",
         "margin_top": 0,
@@ -438,6 +438,27 @@
         "background": "rgba(0,0,0,0)",
         "text_color": "rgba(0,0,0,0)"
       }
+    },
+    "1772123363ce666331": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_nGG8bL": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_nGG8bL"
+      ],
+      "settings": {
+        "include_horizontal_margins": true,
+        "include_vertical_margins": true
+      }
     }
   },
   "order": [
@@ -448,6 +469,7 @@
     "image_with_text_8YkwVd",
     "image_with_text_XrnFrQ",
     "com_6hdjLn",
-    "faq_cbkQ3V"
+    "faq_cbkQ3V",
+    "1772123363ce666331"
   ]
 }
