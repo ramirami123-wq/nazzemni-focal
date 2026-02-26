@@ -1,6 +1,447 @@
+{% doc %}
+  @prompt
+    slide bar
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-slider-bar-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    padding: 40px;
+    background-color: {{ block.settings.background_color }};
+    border-radius: {{ block.settings.border_radius }}px;
+  }
+
+  .ai-slider-bar__content-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .ai-slider-bar__header-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .ai-slider-bar__title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    color: {{ block.settings.title_color }};
+    margin: 0;
+  }
+
+  .ai-slider-bar__description-{{ ai_gen_id }} {
+    font-size: {{ block.settings.description_size }}px;
+    color: {{ block.settings.description_color }};
+    margin: 0;
+  }
+
+  .ai-slider-bar__slider-wrapper-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .ai-slider-bar__value-display-{{ ai_gen_id }} {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: {{ block.settings.label_color }};
+  }
+
+  .ai-slider-bar__current-value-{{ ai_gen_id }} {
+    font-size: 18px;
+    font-weight: 600;
+    color: {{ block.settings.value_color }};
+  }
+
+  .ai-slider-bar__range-labels-{{ ai_gen_id }} {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+  }
+
+  .ai-slider-bar__slider-container-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+  }
+
+  .ai-slider-bar__input-{{ ai_gen_id }} {
+    width: 100%;
+    height: {{ block.settings.track_height }}px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .ai-slider-bar__input-{{ ai_gen_id }}::-webkit-slider-track {
+    width: 100%;
+    height: {{ block.settings.track_height }}px;
+    background: {{ block.settings.track_color }};
+    border-radius: {{ block.settings.track_height | divided_by: 2 }}px;
+  }
+
+  .ai-slider-bar__input-{{ ai_gen_id }}::-moz-range-track {
+    width: 100%;
+    height: {{ block.settings.track_height }}px;
+    background: {{ block.settings.track_color }};
+    border-radius: {{ block.settings.track_height | divided_by: 2 }}px;
+  }
+
+  .ai-slider-bar__input-{{ ai_gen_id }}::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: {{ block.settings.thumb_size }}px;
+    height: {{ block.settings.thumb_size }}px;
+    background: {{ block.settings.thumb_color }};
+    border-radius: 50%;
+    cursor: pointer;
+    border: {{ block.settings.thumb_border_width }}px solid {{ block.settings.thumb_border_color }};
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+  }
+
+  .ai-slider-bar__input-{{ ai_gen_id }}::-moz-range-thumb {
+    width: {{ block.settings.thumb_size }}px;
+    height: {{ block.settings.thumb_size }}px;
+    background: {{ block.settings.thumb_color }};
+    border-radius: 50%;
+    cursor: pointer;
+    border: {{ block.settings.thumb_border_width }}px solid {{ block.settings.thumb_border_color }};
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+  }
+
+  .ai-slider-bar__input-{{ ai_gen_id }}::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+  }
+
+  .ai-slider-bar__input-{{ ai_gen_id }}::-moz-range-thumb:hover {
+    transform: scale(1.1);
+  }
+
+  .ai-slider-bar__progress-{{ ai_gen_id }} {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: {{ block.settings.track_height }}px;
+    background: {{ block.settings.progress_color }};
+    border-radius: {{ block.settings.track_height | divided_by: 2 }}px;
+    pointer-events: none;
+    transition: width 0.1s ease;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-slider-bar-{{ ai_gen_id }} {
+      padding: 24px;
+    }
+
+    .ai-slider-bar__title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_size | times: 0.85 }}px;
+    }
+
+    .ai-slider-bar__description-{{ ai_gen_id }} {
+      font-size: {{ block.settings.description_size | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}
+
+<slider-bar-{{ ai_gen_id }}
+  class="ai-slider-bar-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-slider-bar__content-{{ ai_gen_id }}">
+    {% if block.settings.title != blank or block.settings.description != blank %}
+      <div class="ai-slider-bar__header-{{ ai_gen_id }}">
+        {% if block.settings.title != blank %}
+          <h3 class="ai-slider-bar__title-{{ ai_gen_id }}">{{ block.settings.title }}</h3>
+        {% endif %}
+        {% if block.settings.description != blank %}
+          <p class="ai-slider-bar__description-{{ ai_gen_id }}">{{ block.settings.description }}</p>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="ai-slider-bar__slider-wrapper-{{ ai_gen_id }}">
+      <div class="ai-slider-bar__value-display-{{ ai_gen_id }}">
+        <span class="ai-slider-bar__current-value-{{ ai_gen_id }}" data-current-value>
+          {{ block.settings.min_value }}{% if block.settings.value_suffix != blank %}{{ block.settings.value_suffix }}{% endif %}
+        </span>
+        <div class="ai-slider-bar__range-labels-{{ ai_gen_id }}">
+          <span>{{ block.settings.min_value }}{% if block.settings.value_suffix != blank %}{{ block.settings.value_suffix }}{% endif %}</span>
+          <span>-</span>
+          <span>{{ block.settings.max_value }}{% if block.settings.value_suffix != blank %}{{ block.settings.value_suffix }}{% endif %}</span>
+        </div>
+      </div>
+
+      <div class="ai-slider-bar__slider-container-{{ ai_gen_id }}">
+        <div class="ai-slider-bar__progress-{{ ai_gen_id }}" data-progress></div>
+        <input
+          type="range"
+          class="ai-slider-bar__input-{{ ai_gen_id }}"
+          min="{{ block.settings.min_value }}"
+          max="{{ block.settings.max_value }}"
+          step="{{ block.settings.step_value }}"
+          value="{{ block.settings.min_value }}"
+          data-slider
+          aria-label="{{ block.settings.title | default: 'Slider' }}"
+        >
+      </div>
+    </div>
+  </div>
+</slider-bar-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class SliderBar{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.slider = this.querySelector('[data-slider]');
+        this.currentValueDisplay = this.querySelector('[data-current-value]');
+        this.progressBar = this.querySelector('[data-progress]');
+        this.suffix = '{{ block.settings.value_suffix }}';
+        
+        if (this.slider) {
+          this.updateProgress();
+          this.slider.addEventListener('input', this.handleSliderChange.bind(this));
+        }
+      }
+
+      handleSliderChange(event) {
+        this.updateProgress();
+      }
+
+      updateProgress() {
+        const value = parseFloat(this.slider.value);
+        const min = parseFloat(this.slider.min);
+        const max = parseFloat(this.slider.max);
+        const percentage = ((value - min) / (max - min)) * 100;
+        
+        if (this.currentValueDisplay) {
+          this.currentValueDisplay.textContent = value + this.suffix;
+        }
+        
+        if (this.progressBar) {
+          this.progressBar.style.width = percentage + '%';
+        }
+      }
+    }
+
+    customElements.define('slider-bar-{{ ai_gen_id }}', SliderBar{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Slider bar",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Adjust value"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description",
+      "default": "Slide to select your preferred value"
+    },
+    {
+      "type": "header",
+      "content": "Slider settings"
+    },
+    {
+      "type": "range",
+      "id": "min_value",
+      "label": "Minimum value",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "max_value",
+      "label": "Maximum value",
+      "min": 10,
+      "max": 1000,
+      "step": 10,
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "step_value",
+      "label": "Step value",
+      "min": 1,
+      "max": 50,
+      "step": 1,
+      "default": 1
+    },
+    {
+      "type": "text",
+      "id": "value_suffix",
+      "label": "Value suffix",
+      "default": "%"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#f7f7f7"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Title size",
+      "min": 14,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "label": "Description size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "label_color",
+      "label": "Label color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "value_color",
+      "label": "Value color",
+      "default": "#0c1b54"
+    },
+    {
+      "type": "header",
+      "content": "Track"
+    },
+    {
+      "type": "range",
+      "id": "track_height",
+      "label": "Track height",
+      "min": 4,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "color",
+      "id": "track_color",
+      "label": "Track color",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "color",
+      "id": "progress_color",
+      "label": "Progress color",
+      "default": "#0c1b54"
+    },
+    {
+      "type": "header",
+      "content": "Thumb"
+    },
+    {
+      "type": "range",
+      "id": "thumb_size",
+      "label": "Thumb size",
+      "min": 16,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "color",
+      "id": "thumb_color",
+      "label": "Thumb color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "thumb_border_width",
+      "label": "Thumb border width",
+      "min": 0,
+      "max": 6,
+      "step": 1,
+      "unit": "px",
+      "default": 2
+    },
+    {
+      "type": "color",
+      "id": "thumb_border_color",
+      "label": "Thumb border color",
+      "default": "#0c1b54"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Slider bar"
+    }
+  ]
+}
 {% endschema %}
