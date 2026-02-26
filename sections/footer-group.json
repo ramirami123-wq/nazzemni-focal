@@ -45,13 +45,6 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "text": {
-          "type": "text",
-          "settings": {
-            "title": "About our store",
-            "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.</p>"
-          }
-        },
         "links": {
           "type": "links",
           "settings": {
@@ -62,22 +55,13 @@
           "type": "newsletter",
           "settings": {
             "title": "Newsletter",
-            "content": "<p>A short sentence describing what someone will receive by subscribing</p>"
-          }
-        },
-        "social_media": {
-          "type": "social_media",
-          "settings": {
-            "title": "Follow us",
-            "content": "<p>To configure social media, go to your social media settings. Change this text in the theme editor.</p>"
+            "content": ""
           }
         }
       },
       "block_order": [
-        "text",
         "links",
-        "newsletter",
-        "social_media"
+        "newsletter"
       ],
       "settings": {
         "show_payment_icons": true,
