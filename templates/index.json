@@ -196,28 +196,6 @@
         "reveal_on_scroll": true,
         "label": "Shop the looks"
       }
-    },
-    "testimonials": {
-      "type": "testimonials",
-      "blocks": {
-        "testimonial-1": {
-          "type": "testimonial",
-          "settings": {
-            "content": "Write some content about what they are saying about your store.",
-            "author": "John S."
-          }
-        }
-      },
-      "block_order": [
-        "testimonial-1"
-      ],
-      "settings": {
-        "reveal_on_scroll": true,
-        "subheading": "",
-        "title": "",
-        "background": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)"
-      }
     }
   },
   "order": [
@@ -226,7 +204,6 @@
     "17721123692ddca8e9",
     "rich_text_8iDkdx",
     "faq_CKztym",
-    "shop-the-look",
-    "testimonials"
+    "shop-the-look"
   ]
 }
