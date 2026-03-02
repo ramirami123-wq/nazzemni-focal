@@ -160,6 +160,7 @@
       "block_order": [
         "item_BrjwQF"
       ],
+      "disabled": true,
       "name": "Image with text",
       "settings": {
         "reveal_on_scroll": true,
@@ -193,6 +194,7 @@
       "block_order": [
         "item_GpEwj6"
       ],
+      "disabled": true,
       "name": "Image with text",
       "settings": {
         "reveal_on_scroll": true,
