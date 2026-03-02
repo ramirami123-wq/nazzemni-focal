@@ -12,20 +12,16 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "liquid_BNTrLL": {
-          "type": "liquid",
-          "settings": {
-            "liquid": "<style>\n.star-review-wrapper {\ndisplay: flex;\nalign-items: center;\ngap: 8px;\nflex-shrink: 0;\n}\n\n.star-icons svg {\nwidth: 20px;\nheight: 20px;\nfill: #D2D2D2; /* Your deep red color */\n}\n\n.review-text {\nfont-size: 16px;\nfont-weight: 500;\ncolor: #333;\nwhite-space: nowrap;\n}\n\n@media (max-width: 480px) {\n.star-review-wrapper {\nflex-direction: row;\njustify-content: center;\n}\n\n```\n.review-text {\n  font-size: 15px;\n}\n```\n\n}\n</style>\n\n<div class=\"star-review-wrapper\">\n<div class=\"star-icons\">\n<!-- 5 Rounded Stars -->\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"/></svg>\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"/></svg>\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"/></svg>\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"/></svg>\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"/></svg>\n</div>\n<div class=\"review-text\">\n<strong>5</strong> by <strong>124+</strong> Customers\n</div>\n</div>"
-          }
-        },
         "liquid_KKiNTm": {
           "type": "liquid",
+          "name": "Hurry",
           "settings": {
             "liquid": "<section class=\"sale-timer\" aria-label=\"Sale countdown timer\">\n  <style>\n    .sale-timer{\n      width:100%;\n      padding:22px 12px;\n      display:flex;\n      justify-content:center;\n      background:#FFFFF;\n      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;\n    }\n    .sale-timer__wrap{\n      text-align:center;\n    }\n    .sale-timer__label{\n      font-size:24px;\n      font-weight:500;\n      color:#111;\n      margin:0 0 14px 0;\n      line-height:1.1;\n    }\n\n    .sale-timer__row{\n      display:flex;\n      align-items:center;\n      justify-content:center;\n      gap:10px;\n    }\n\n    .sale-timer__box{\n      width:88px;\n      height:68px;\n      background:#2a3e79;\n      color:white;\n      border-radius:6px;\n      display:flex;\n      align-items:center;\n      justify-content:center;\n      font-size:34px;\n      font-weight:700;\n      letter-spacing:1px;\n      font-variant-numeric: tabular-nums;\n    }\n\n    .sale-timer__colon{\n      font-size:32px;\n      font-weight:700;\n      color:#00000;\n      line-height:1;\n      transform: translateY(-1px);\n      user-select:none;\n    }\n\n    @media (max-width:420px){\n      .sale-timer__label{ font-size:20px; }\n      .sale-timer__box{ width:72px; height:58px; font-size:30px; }\n      .sale-timer__colon{ font-size:28px; }\n      .sale-timer__row{ gap:8px; }\n    }\n  </style>\n\n  <div class=\"sale-timer__wrap\">\n    <div class=\"sale-timer__label\">Hurry! Sale ends in</div>\n\n    <div class=\"sale-timer__row\" role=\"timer\" aria-live=\"polite\">\n      <div class=\"sale-timer__box\" id=\"st-hours\">00</div>\n      <div class=\"sale-timer__colon\">:</div>\n      <div class=\"sale-timer__box\" id=\"st-mins\">00</div>\n      <div class=\"sale-timer__colon\">:</div>\n      <div class=\"sale-timer__box\" id=\"st-secs\">00</div>\n    </div>\n  </div>\n\n  <script>\n    (function () {\n      const durationHours = 12; // change if needed\n      const endAt = Date.now() + durationHours * 60 * 60 * 1000;\n\n      const h = document.getElementById(\"st-hours\");\n      const m = document.getElementById(\"st-mins\");\n      const s = document.getElementById(\"st-secs\");\n\n      const pad = n => String(n).padStart(2, \"0\");\n\n      function update(){\n        let diff = endAt - Date.now();\n        if(diff < 0) diff = 0;\n\n        const total = Math.floor(diff / 1000);\n        h.textContent = pad(Math.floor(total / 3600));\n        m.textContent = pad(Math.floor((total % 3600) / 60));\n        s.textContent = pad(total % 60);\n\n        if(diff === 0) clearInterval(timer);\n      }\n\n      update();\n      const timer = setInterval(update, 1000);\n    })();\n  </script>\n</section>"
           }
         },
         "liquid_WqHpzt": {
           "type": "liquid",
+          "disabled": true,
           "settings": {
             "liquid": "<div style=\"padding: 12px; text-align: left; background-color: #f9f9f9; font-size: 15px; border-radius: 12px; margin-top: 10px; margin-bottom: 10px; line-height: 1.6;\">\n<span style=\"font-weight: bold;\">✨ Spacious & Organized</span> – Keep all your cosmetics, skincare, and essentials neatly arranged in one place.<br><br>\n<span style=\"font-weight: bold;\">🧳 Travel-Ready Design</span> – Lightweight and compact, perfect for daily use, trips, or on-the-go touch-ups.<br><br>\n<span style=\"font-weight: bold;\">💖 Stylish & Durable</span> – Designed by Nazzemni to combine elegance with long-lasting quality for everyday convenience.\n</div>"
           }
@@ -57,13 +53,13 @@
         },
         "liquid_tGfrix": {
           "type": "liquid",
+          "name": "Order now to receive by",
           "settings": {
             "liquid": "<div style=\"padding: 12px; text-align: left; background-color: #f5f5f5; font-size: 15px; border-radius: 13px; margin-top: 12px; margin-bottom: 12px; display: flex; align-items: center;\"> \n    <span class=\"em\" style=\"margin-right: 8px;\">\n        <svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24px\" viewBox=\"0 -960 960 960\" width=\"24px\" fill=\"#545454\">\n            <path d=\"M240-160q-50 0-85-35t-35-85H40v-440q0-33 23.5-56.5T120-800h560v160h120l120 160v200h-80q0 50-35 85t-85 35q-50 0-85-35t-35-85H360q0 50-35 85t-85 35Zm0-80q17 0 28.5-11.5T280-280q0-17-11.5-28.5T240-320q-17 0-28.5 11.5T200-280q0 17 11.5 28.5T240-240ZM120-360h32q17-18 39-29t49-11q27 0 49 11t39 29h272v-360H120v360Zm600 120q17 0 28.5-11.5T760-280q0-17-11.5-28.5T720-320q-17 0-28.5 11.5T680-280q0 17 11.5 28.5T720-240Zm-40-200h170l-90-120h-80v120ZM360-540Z\"/>\n        </svg> \n    </span>\n    <span>Order now to receive by <span id=\"delivery-dates\" style=\"font-weight: bold;\"></span></span>\n</div>\n\n<script>\n    document.addEventListener('DOMContentLoaded', function() {\n        var currentDate = new Date();\n        var minDeliveryDate = new Date();\n        minDeliveryDate.setDate(currentDate.getDate() + 2);\n\n        var maxDeliveryDate = new Date();\n        maxDeliveryDate.setDate(currentDate.getDate() + 3);\n\n        var formatDate = function(date) {\n            var dayNames = [\"Sunday\", \"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\"];\n            var monthNames = [\"January\", \"February\", \"March\", \"April\", \"May\", \"June\",\n                \"July\", \"August\", \"September\", \"October\", \"November\", \"December\"\n            ];\n            var day = date.getDate();\n            var month = monthNames[date.getMonth()];\n            var weekday = dayNames[date.getDay()];\n            return weekday + \", \" + month + \" \" + day;\n        };\n\n        var deliverySpan = document.getElementById('delivery-dates');\n        deliverySpan.textContent = formatDate(minDeliveryDate) + ' – ' + formatDate(maxDeliveryDate);\n    });\n</script>"
           }
         }
       },
       "block_order": [
-        "liquid_BNTrLL",
         "liquid_KKiNTm",
         "liquid_WqHpzt",
         "variant_picker",
@@ -98,6 +94,7 @@
       "block_order": [
         "description"
       ],
+      "disabled": true,
       "settings": {}
     },
     "product-recommendations": {
@@ -115,6 +112,7 @@
       "blocks": {
         "ai_gen_block_adef03d_DcHCBg": {
           "type": "ai_gen_block_adef03d",
+          "name": "Free delivery on orders",
           "settings": {
             "text_1": "Free Delivery  on orders over $40",
             "text_2": "Free Delivery  on orders over $40",
@@ -154,7 +152,7 @@
             "tab_label": "Item",
             "subheading": "",
             "title": "",
-            "content": "<p><br/>The Nazzemni Makeup Pouch is designed to keep your essentials organized, accessible, and ready wherever you go. With its spacious interior and smart compartments, it easily stores cosmetics, skincare, toiletries, and everyday items in one neat place.<br/><br/></p>",
+            "content": "<p><br/>This Makeup Pouch is designed to keep your essentials organized, accessible, and ready wherever you go.</p><p>With its spacious interior and smart compartments, it easily stores cosmetics, skincare, toiletries, and everyday items in one neat place.<br/><br/></p>",
             "button_text": "",
             "button_link": ""
           }
@@ -176,41 +174,6 @@
         "button_background": "rgba(0,0,0,0)",
         "button_text_color": "rgba(0,0,0,0)"
       }
-    },
-    "blocks_7ekwfR": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_adef03d_ACwMDy": {
-          "type": "ai_gen_block_adef03d",
-          "settings": {
-            "text_1": "Free shipping on orders over $40",
-            "text_2": "nazzemni",
-            "text_3": "Free shipping on orders over $40",
-            "text_4": "100% satisfaction guaranteed",
-            "show_icon": true,
-            "icon_type": "star",
-            "icon_size": 20,
-            "icon_color": "#0c1b54",
-            "icon_text_spacing": 8,
-            "text_size": 16,
-            "text_weight": "500",
-            "text_transform": "none",
-            "text_color": "#000000",
-            "speed": 30,
-            "pause_on_hover": true,
-            "item_spacing": 60,
-            "padding_vertical": 20,
-            "desktop_width_percent": 100,
-            "background_color": "#f7f7f7"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_adef03d_ACwMDy"
-      ],
-      "name": "Marquee",
-      "settings": {}
     },
     "image_with_text_XrnFrQ": {
       "type": "image-with-text",
@@ -502,7 +465,6 @@
     "product-recommendations",
     "1772112756b71eda01",
     "image_with_text_8YkwVd",
-    "blocks_7ekwfR",
     "image_with_text_XrnFrQ",
     "com_6hdjLn",
     "faq_cbkQ3V",
