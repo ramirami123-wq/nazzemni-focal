@@ -259,6 +259,7 @@
         "item_KWPwtH",
         "item_jEyeCX"
       ],
+      "disabled": true,
       "name": "SS - Comparison Table #4",
       "settings": {
         "heading": "<h2>US VS OTHER BRANDS</h2>",
@@ -429,6 +430,7 @@
         "question_7Rxwez",
         "question_Pzgd7t"
       ],
+      "disabled": true,
       "name": "FAQ",
       "settings": {
         "show_navigation": false,
