@@ -242,61 +242,6 @@
         "button_text_color": "rgba(0,0,0,0)"
       }
     },
-    "faq_CKztym": {
-      "type": "faq",
-      "blocks": {
-        "category_6irtAE": {
-          "type": "category",
-          "disabled": true,
-          "settings": {
-            "title": ""
-          }
-        },
-        "question_fyY6jc": {
-          "type": "question",
-          "settings": {
-            "title": "Is the pouch suitable for travel?",
-            "answer": "<p>Yes! The Nazzemni Makeup Pouch is lightweight, compact, and travel-friendly — ideal for vacations, business trips, gym bags, or everyday use.  </p>"
-          }
-        },
-        "question_yjXJCH": {
-          "type": "question",
-          "settings": {
-            "title": "Does it have compartments inside?",
-            "answer": "<p>Absolutely. It features multiple partitions to help you keep items organized and easy to find.</p>"
-          }
-        },
-        "question_RMRddL": {
-          "type": "question",
-          "settings": {
-            "title": "Can it be used for things other than makeup?",
-            "answer": "<p>Of course! Many customers use it for toiletries, tech accessories, stationery, or small personal items.</p>"
-          }
-        },
-        "question_399beQ": {
-          "type": "question",
-          "settings": {
-            "title": "Is this a good gift option?",
-            "answer": "<p>Definitely. Its stylish design and practicality make it a great gift for friends, family, or anyone who loves staying organized.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "category_6irtAE",
-        "question_fyY6jc",
-        "question_yjXJCH",
-        "question_RMRddL",
-        "question_399beQ"
-      ],
-      "name": "FAQ",
-      "settings": {
-        "show_navigation": false,
-        "title": "FAQ",
-        "content": "",
-        "background": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)"
-      }
-    },
     "shop-the-look": {
       "type": "shop-the-look",
       "settings": {
@@ -311,7 +256,6 @@
     "featured_product_hC4qiJ",
     "17721123692ddca8e9",
     "rich_text_8iDkdx",
-    "faq_CKztym",
     "shop-the-look"
   ]
 }
