@@ -12,6 +12,12 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "text_GhBbTL": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Keep your vanity organized and your brushes protected with this sleek makeup brush storage bin.</p><p>Designed to store brushes upright, it prevents dust buildup and keeps bristles in shape for longer-lasting use. With its modern, compact design, it saves space while adding a touch of elegance to your beauty routine.<br/></p>"
+          }
+        },
         "liquid_KKiNTm": {
           "type": "liquid",
           "name": "Hurry",
@@ -61,6 +67,7 @@
         }
       },
       "block_order": [
+        "text_GhBbTL",
         "liquid_KKiNTm",
         "liquid_WqHpzt",
         "variant_picker",
