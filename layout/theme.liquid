@@ -151,5 +151,57 @@ NOTE TO DEVELOPERS: welcome to Focal theme! We hope that you will enjoy editing 
     {%- if request.page_type != 'gift_card' and request.page_type != 'password' -%}
       {%- sections 'footer-group' -%}
     {%- endif -%}
+
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  const productsToHide = [
+    'Car Seat Side Gap Filler',
+    'Non-Slip Mat Quick Drying Dish Drain Pad Kitchen'
+  ];
+
+  function hideRecommendedProducts() {
+    const elements = document.querySelectorAll(
+      '.product-recommendations *, .related-products *, .recommendations *'
+    );
+
+    elements.forEach(function (element) {
+      const text = element.textContent.trim();
+
+      productsToHide.forEach(function (productName) {
+        if (text === productName) {
+
+          // Hide the product card rather than just the title
+          const card =
+            element.closest('li') ||
+            element.closest('.grid__item') ||
+            element.closest('.card-wrapper') ||
+            element.closest('.product-card') ||
+            element.parentElement;
+
+          if (card) {
+            card.style.display = 'none';
+          }
+        }
+      });
+    });
+  }
+
+  // Run initially
+  hideRecommendedProducts();
+
+  // Run again because Shopify loads recommendations dynamically
+  const observer = new MutationObserver(function () {
+    hideRecommendedProducts();
+  });
+
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
+
+});
+</script>
+
   </body>
 </html>
